@@ -5,7 +5,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Configurando o Python
         uses: actions/setup-python@v7
         with:
@@ -14,7 +14,7 @@ jobs:
       - name: Rodando os testes
         run: python -m unittest -v
       - name: Instalando as dependencias
-        run: pip install coverage pylint
+        run: pip install coverage pylint numpy
       - name: Cobertura dos testes
         run: | 
           coverage run -m unittest discover
