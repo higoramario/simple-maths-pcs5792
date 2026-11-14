@@ -28,5 +28,5 @@ jobs:
           name: code-coverage-report
           path: htmlcov
       - name: Executando o pylint
-        run: pylint
+        run: pylint --recursive=y
 
